@@ -1,0 +1,6 @@
+@Dimchev.DiceRoller.Auth.WebApi_HostAddress = http://localhost:5162
+
+GET {{Dimchev.DiceRoller.Auth.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
