@@ -11,15 +11,15 @@ namespace Dimchev.DiceRoller.Operative.WebApi.Controllers
     public class DiceRollController(IDiceRollService diceRollService) : Controller
     {
         [HttpPost("roll")]
-        public async Task<IActionResult> RollDice()
+        public async Task<IActionResult> DiceRoll()
         {
             var userId = Guid.Parse(User.FindFirst("id").Value);
             var result = await diceRollService.RollDiceAsync(userId);
             return Ok(result);
         }
 
-        [HttpGet("rolls")]
-        public async Task<IActionResult> GetRolls([FromQuery] GetRollsRequest getRollsRequest)
+        [HttpGet("report")]
+        public async Task<IActionResult> GetReport([FromQuery] GetDiceRollsRequest getRollsRequest)
         {
             var userId = Guid.Parse(User.FindFirst("id").Value);
             var results = await diceRollService.GetRollsAsync(userId, getRollsRequest);

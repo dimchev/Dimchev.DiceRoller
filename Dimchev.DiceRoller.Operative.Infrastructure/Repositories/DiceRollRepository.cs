@@ -14,7 +14,7 @@ namespace Dimchev.DiceRoller.Operative.Infrastructure.Repositories
             this.dbContext = dbContext;
         }
 
-        public async Task<List<DiceRollModel>> GetDiceRollsAsync(Guid userId, GetRollsRequest getRollsRequest)
+        public async Task<List<DiceRollModel>> GetDiceRollsAsync(Guid userId, GetDiceRollsRequest getRollsRequest)
         {
             var query = dbContext.DiceRolls.AsQueryable().Where(x => x.UserId == userId);
 
@@ -32,9 +32,14 @@ namespace Dimchev.DiceRoller.Operative.Infrastructure.Repositories
                 "Sum" => getRollsRequest.Descending
                     ? query.OrderByDescending(x => x.FirstDice + x.SecondDice)
                     : query.OrderBy(x => x.FirstDice + x.SecondDice),
-                _ => getRollsRequest.Descending
+                "Date" => getRollsRequest.Descending
                     ? query.OrderByDescending(x => x.CreatedAt)
-                    : query.OrderBy(x => x.CreatedAt)
+                    : query.OrderBy(x => x.CreatedAt),
+                "SumAndDate" => getRollsRequest.Descending
+                    ? query.OrderByDescending(x => x.FirstDice + x.SecondDice)
+                        .ThenByDescending(x => x.CreatedAt)
+                    : query.OrderBy(x => x.FirstDice + x.SecondDice)
+                        .ThenBy(x => x.CreatedAt)
             };
 
             query = query.Skip((getRollsRequest.Page - 1) * getRollsRequest.PageSize)

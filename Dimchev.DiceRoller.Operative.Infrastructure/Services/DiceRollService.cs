@@ -6,7 +6,7 @@ namespace Dimchev.DiceRoller.Operative.Infrastructure.Services
 {
     public class DiceRollService : IDiceRollService
     {
-        public Task<List<DiceRoll>> GetRollsAsync(Guid userId, GetRollsRequest getRollsRequest)
+        public Task<List<DiceRoll>> GetRollsAsync(Guid userId, GetDiceRollsRequest getRollsRequest)
         {
             throw new NotImplementedException();
         }

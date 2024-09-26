@@ -1,6 +1,6 @@
 ﻿namespace Dimchev.DiceRoller.Operative.Core.Dtos
 {
-    public class GetRollsRequest
+    public class GetDiceRollsRequest
     {
         public DateTime? Year { get; set; }
 
@@ -12,7 +12,7 @@
 
         public int PageSize { get; set; } = 10;
 
-        public string SortBy { get; set; } = "createdAt";
+        public string SortBy { get; set; } = "Sum";
 
         public bool Descending { get; set; } = false;
     }
