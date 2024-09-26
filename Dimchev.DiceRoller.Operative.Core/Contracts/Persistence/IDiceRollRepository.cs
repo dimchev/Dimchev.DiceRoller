@@ -5,6 +5,6 @@ namespace Dimchev.DiceRoller.Operative.Core.Contracts.Persistence
 {
     public interface IDiceRollRepository : IRepository<DiceRollModel>
     {
-        Task<List<DiceRollModel>> GetReportAsync(GetRollsRequest getRollsRequest);
+        public Task<List<DiceRollModel>> GetDiceRollsAsync(Guid userId, GetRollsRequest getRollsRequest);
     }
 }

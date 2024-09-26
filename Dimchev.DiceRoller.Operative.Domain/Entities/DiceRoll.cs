@@ -4,6 +4,8 @@
     {
         public Guid DiceRollId { get; set; }
 
+        public Guid UserId { get; set; }
+
         public int FirstDice { get; set; }
 
         public int SecondDice { get; set; }

@@ -10,6 +10,9 @@ namespace Dimchev.DiceRoller.Operative.Core.Models
         public Guid DiceRollId { get; set; }
 
         [Required]
+        public Guid UserId { get; set; }
+
+        [Required]
         public int FirstDice { get; set; }
 
         [Required]
