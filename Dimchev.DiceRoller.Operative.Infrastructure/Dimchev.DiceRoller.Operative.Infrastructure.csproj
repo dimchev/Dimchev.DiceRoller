@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Dimchev.DiceRoller.Auth.Core\Dimchev.DiceRoller.Auth.Core.csproj" />
+    <ProjectReference Include="..\Dimchev.DiceRoller.Operative.Core\Dimchev.DiceRoller.Operative.Core.csproj" />
+  </ItemGroup>
+
 </Project>
