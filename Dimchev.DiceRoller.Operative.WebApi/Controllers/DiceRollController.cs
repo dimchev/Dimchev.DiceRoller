@@ -14,7 +14,7 @@ namespace Dimchev.DiceRoller.Operative.WebApi.Controllers
         public async Task<IActionResult> DiceRoll()
         {
             var userId = Guid.Parse(User.FindFirst("id").Value);
-            var result = await diceRollService.RollDiceAsync(userId);
+            var result = await diceRollService.DiceRollAsync(userId);
             return Ok(result);
         }
 

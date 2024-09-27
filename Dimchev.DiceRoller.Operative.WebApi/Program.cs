@@ -1,4 +1,5 @@
 using Dimchev.DiceRoller.Common.Infrastructure.Configuration;
+using Dimchev.DiceRoller.Operative.Core;
 using Dimchev.DiceRoller.Operative.Infrastructure;
 using Dimchev.DiceRoller.Operative.Infrastructure.Configuration;
 using Dimchev.DiceRoller.Operative.WebApi.Middleware;
@@ -20,6 +21,7 @@ builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCoreApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection(JwtSettings.Section));
 builder.Services.ConfigureOptions<JwtBearerTokenValidationConfiguration>()

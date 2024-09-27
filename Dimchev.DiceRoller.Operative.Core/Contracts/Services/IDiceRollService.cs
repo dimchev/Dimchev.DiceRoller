@@ -5,7 +5,7 @@ namespace Dimchev.DiceRoller.Operative.Core.Contracts.Services
 {
     public interface IDiceRollService
     {
-        public Task<DiceRoll> RollDiceAsync(Guid userId);
+        public Task<DiceRollResponse> DiceRollAsync(Guid userId);
 
         public Task<List<DiceRoll>> GetRollsAsync(Guid userId, GetDiceRollsRequest getRollsRequest);
     }
