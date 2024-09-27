@@ -17,6 +17,8 @@ namespace Dimchev.DiceRoller.Operative.Infrastructure
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IDiceRollRepository, DiceRollRepository>();
             services.AddScoped<IDiceRollService, DiceRollService>();
+            services.AddSingleton<IRandomNumberProvider, RandomNumberProvider>();
+            services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
 
             return services;
         }
