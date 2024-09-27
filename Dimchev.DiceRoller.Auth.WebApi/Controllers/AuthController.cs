@@ -6,7 +6,7 @@ namespace Dimchev.DiceRoller.Auth.WebApi.Controllers
 {
     [ApiController]
     [Route("api/auth")]
-    public class AuthController(IUserService userService, ITokenService tokenService) : Controller
+    public class AuthController(IUserService userService) : Controller
     {
         [HttpPost("create-user")]
         public async Task<IActionResult> CreateUser([FromForm] CreateUserDto dto)

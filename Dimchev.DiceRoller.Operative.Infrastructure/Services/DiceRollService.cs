@@ -7,7 +7,11 @@ using Dimchev.DiceRoller.Operative.Domain.Entities;
 
 namespace Dimchev.DiceRoller.Operative.Infrastructure.Services
 {
-    public class DiceRollService(IDiceRollRepository diceRollRepository, IMapper mapper) : IDiceRollService
+    public class DiceRollService(
+        IDiceRollRepository diceRollRepository,
+        IMapper mapper,
+        IRandomNumberProvider randomNumberProvider,
+        IDateTimeProvider dateTimeProvider) : IDiceRollService
     {
         public async Task<List<DiceRoll>> GetRollsAsync(Guid userId, GetDiceRollsRequest getRollsRequest)
         {
@@ -17,14 +21,12 @@ namespace Dimchev.DiceRoller.Operative.Infrastructure.Services
 
         public async Task<DiceRollResponse> DiceRollAsync(Guid userId)
         {
-            Random random = new Random();
-
             var model = new DiceRollModel
             {
                 UserId = userId,
-                FirstDice = random.Next(1, 7),
-                SecondDice = random.Next(1, 7),
-                CreatedAt = DateTime.UtcNow
+                FirstDice = randomNumberProvider.Next(1, 7),
+                SecondDice = randomNumberProvider.Next(1, 7),
+                CreatedAt = dateTimeProvider.UtcNow
             };
 
             model = await diceRollRepository.AddAsync(model);
