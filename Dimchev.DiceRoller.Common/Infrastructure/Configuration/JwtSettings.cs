@@ -1,4 +1,4 @@
-﻿namespace Dimchev.DiceRoller.Operative.Infrastructure.Configuration
+﻿namespace Dimchev.DiceRoller.Common.Infrastructure.Configuration
 {
     public class JwtSettings
     {

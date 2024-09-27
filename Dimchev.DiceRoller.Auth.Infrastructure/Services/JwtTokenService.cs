@@ -1,6 +1,6 @@
 ﻿using Dimchev.DiceRoller.Auth.Core.Contracts.Services;
 using Dimchev.DiceRoller.Auth.Domain.Entities;
-using Dimchev.DiceRoller.Auth.Infrastructure.Configuration;
+using Dimchev.DiceRoller.Common.Infrastructure.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;

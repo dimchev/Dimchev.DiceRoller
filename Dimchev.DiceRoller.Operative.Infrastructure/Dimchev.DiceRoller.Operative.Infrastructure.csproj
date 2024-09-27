@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Dimchev.DiceRoller.Common\Dimchev.DiceRoller.Common.csproj" />
     <ProjectReference Include="..\Dimchev.DiceRoller.Operative.Core\Dimchev.DiceRoller.Operative.Core.csproj" />
   </ItemGroup>
 

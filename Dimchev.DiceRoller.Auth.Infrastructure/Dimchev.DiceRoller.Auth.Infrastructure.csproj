@@ -23,6 +23,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Dimchev.DiceRoller.Auth.Core\Dimchev.DiceRoller.Auth.Core.csproj" />
     <ProjectReference Include="..\Dimchev.DiceRoller.Auth.Domain\Dimchev.DiceRoller.Auth.Domain.csproj" />
+    <ProjectReference Include="..\Dimchev.DiceRoller.Common\Dimchev.DiceRoller.Common.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,8 +1,8 @@
 using Dimchev.DiceRoller.Auth.Core;
 using Dimchev.DiceRoller.Auth.Infrastructure;
-using Dimchev.DiceRoller.Auth.Infrastructure.Configuration;
 using Dimchev.DiceRoller.Auth.WebApi.Middleware;
 using Dimchev.DiceRoller.Auth.WebApi.Validators;
+using Dimchev.DiceRoller.Common.Infrastructure.Configuration;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 

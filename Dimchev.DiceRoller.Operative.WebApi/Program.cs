@@ -1,5 +1,7 @@
+using Dimchev.DiceRoller.Common.Infrastructure.Configuration;
 using Dimchev.DiceRoller.Operative.Infrastructure;
 using Dimchev.DiceRoller.Operative.Infrastructure.Configuration;
+using Dimchev.DiceRoller.Operative.WebApi.Middleware;
 using Dimchev.DiceRoller.Operative.WebApi.Validators;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -65,7 +67,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-
+app.UseMiddleware<ExceptionHandlerMiddleware>();
 app.MapControllers();
 
 app.Run();

@@ -1,4 +1,4 @@
-﻿namespace Dimchev.DiceRoller.Auth.Core.Exceptions
+﻿namespace Dimchev.DiceRoller.Common.Core.Exceptions
 {
     public class BadRequestException : Exception
     {

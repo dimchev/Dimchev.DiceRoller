@@ -1,9 +1,9 @@
-﻿using Dimchev.DiceRoller.Common.Core.Exceptions;
+﻿using System.Net;
 using FluentValidation;
 using Newtonsoft.Json;
-using System.Net;
+using Dimchev.DiceRoller.Common.Core.Exceptions;
 
-namespace Dimchev.DiceRoller.Auth.WebApi.Middleware
+namespace Dimchev.DiceRoller.Operative.WebApi.Middleware
 {
     public class ExceptionHandlerMiddleware
     {
