@@ -2,11 +2,11 @@
 {
     public class GetDiceRollsRequest
     {
-        public DateTime? Year { get; set; }
+        public int? Year { get; set; }
 
-        public DateTime? Month { get; set; }
+        public int? Month { get; set; }
 
-        public DateTime? Day { get; set; }
+        public int? Day { get; set; }
 
         public int Page { get; set; } = 1;
 

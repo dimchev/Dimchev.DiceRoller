@@ -19,13 +19,13 @@ namespace Dimchev.DiceRoller.Operative.Infrastructure.Repositories
             var query = dbContext.DiceRolls.AsQueryable().Where(x => x.UserId == userId);
 
             if (getRollsRequest.Year.HasValue)
-                query = query.Where(x => x.CreatedAt.Year == getRollsRequest.Year.Value.Year);
+                query = query.Where(x => x.CreatedAt.Year == getRollsRequest.Year.Value);
 
             if (getRollsRequest.Month.HasValue)
-                query = query.Where(x => x.CreatedAt.Month == getRollsRequest.Month.Value.Month);
+                query = query.Where(x => x.CreatedAt.Month == getRollsRequest.Month.Value);
 
             if (getRollsRequest.Day.HasValue)
-                query = query.Where(x => x.CreatedAt.Day == getRollsRequest.Day.Value.Day);
+                query = query.Where(x => x.CreatedAt.Day == getRollsRequest.Day.Value);
 
             query = getRollsRequest.SortBy switch
             {

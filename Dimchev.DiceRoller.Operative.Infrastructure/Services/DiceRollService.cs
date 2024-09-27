@@ -11,7 +11,8 @@ namespace Dimchev.DiceRoller.Operative.Infrastructure.Services
     {
         public async Task<List<DiceRoll>> GetRollsAsync(Guid userId, GetDiceRollsRequest getRollsRequest)
         {
-            throw new NotImplementedException();
+            var models = await diceRollRepository.GetDiceRollsAsync(userId, getRollsRequest);
+            return mapper.Map<List<DiceRoll>>(models);
         }
 
         public async Task<DiceRollResponse> DiceRollAsync(Guid userId)
