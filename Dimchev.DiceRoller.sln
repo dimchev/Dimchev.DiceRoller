@@ -22,6 +22,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2516E002-5A47-4F7E-BBCB-1A571EFC101B}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dimchev.DiceRoller.Common", "Dimchev.DiceRoller.Common\Dimchev.DiceRoller.Common.csproj", "{8F7BA69E-D28A-44DF-9024-C97E59E9D8F6}"
